@@ -5,6 +5,9 @@
 
     <div class="div-search">
       <h4 class="is-size-4">Pokedex</h4>
+      <h4 style="color: red; margin-bottom: 15px;">
+        Pode ser que alguns pokemons não estejam na página correta de geração. Sorry about that!
+      </h4>
 
       <div class="select generation">
         <select v-model="generation" @change="selecionarGeracao">
