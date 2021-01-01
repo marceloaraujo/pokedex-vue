@@ -43,7 +43,7 @@ export default {
   name: 'App',
   data() {
     return {
-      generation: 1,
+      generation: 0,
       pokemons: [],
       filteredPokemons: [],
       busca: ''
