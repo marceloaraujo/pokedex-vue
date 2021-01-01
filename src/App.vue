@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-
     <div class="column is-half is-offset-one-quarter">
+      <img class="img-logo" src="./assets/mapps.png">
+      <hr>
+      <h4 class="is-size-4">Pokedex</h4>
       <div v-for="(pokemon, index) in pokemons" :key="index">
         <Pokemon :name="pokemon.name" :url="pokemon.url" :num="index + 1" />
       </div>
-    </div>
+  </div>
 
 
   </div>
@@ -47,5 +49,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.img-logo {
+  height: 170px;
 }
 </style>

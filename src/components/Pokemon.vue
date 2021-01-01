@@ -14,7 +14,7 @@
           
           <div class="media-content">
             <p class="title is-4">{{ num }} - {{ name | upper }}</p>
-            <p class="subtitle is-6">{{ pokemon.type | upper }}</p>
+            <p class="subtitle is-6">{{ pokemon.type }}</p>
           </div>
         </div>
 
