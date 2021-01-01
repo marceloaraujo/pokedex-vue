@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <div class="column is-half is-offset-one-quarter">
-      <img class="img-logo" src="./assets/mapps.png">
-      <hr>
+    <img class="img-logo" src="./assets/mapps.png">
+    <hr>
+
+    <div class="div-search">
       <h4 class="is-size-4">Pokedex</h4>
+      <input type="text" class="input is-rounded search" v-model="busca" placeholder="Buscar Pokemon pelo nome">
+      <button @click="buscar" class="button is-fullwidth is-success search" id="buscabtn">Buscar</button>
+    </div>
 
-      <input type="text" class="input is-rounded" v-model="busca" placeholder="Buscar Pokemon pelo nome">
-      <button @click="buscar" class="button is-fullwidth is-success" id="buscabtn">Buscar</button>
+    <div class="columns is-mobile is-multiline div-pokemons">
 
-      <div v-for="(pokemon, index) in filteredPokemons" :key="pokemon.url">
+      <div class="column is-one-quarter" v-for="(pokemon, index) in filteredPokemons" :key="pokemon.url">
         <Pokemon :name="pokemon.name" :url="pokemon.url" :num="index + 1" />
       </div>
+
   </div>
 
 
@@ -77,6 +81,14 @@ export default {
   margin-top: 60px;
 }
 
+.div-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 .img-logo {
   height: 170px;
 }
@@ -84,4 +96,13 @@ export default {
 #buscabtn {
   margin-top: 2%;
 }
+
+.search {
+  width: 50% !important;
+}
+
+.div-pokemons {
+  padding: 5px;
+}
+
 </style>
