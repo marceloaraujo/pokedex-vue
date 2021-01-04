@@ -19,6 +19,7 @@
         </div>
 
         <div class="content">
+            <button @click="goToDetails" class="button is-medium is-fullwidth btn-detalhes">Detalhes</button>
             <button @click="mudarSprite" class="button is-medium is-fullwidth">Mudar Sprite</button>
         </div>
 
@@ -70,6 +71,12 @@ export default {
               this.isFront = true;
               this.currentImg = this.pokemon.front;
           }
+      },
+      goToDetails: function() {
+        var urlSplit = this.url.split('/');
+        var id = urlSplit[urlSplit.length - 2];
+
+        this.$router.push({name: 'details', params: {id: id, name: this.name, type: this.pokemon.type, front: this.pokemon.front, back: this.pokemon.back}});
       }
   }
 };
@@ -78,5 +85,8 @@ export default {
 <style scoped>
     #pokemon {
         margin-top: 2%;
+    }
+    .btn-detalhes {
+      margin-bottom: 5px;
     }
 </style>
