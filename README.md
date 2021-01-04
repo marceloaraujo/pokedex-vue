@@ -1,6 +1,14 @@
 # pokedex
 
-## Project setup
+A small project for studiyng Vue.js.
+
+### What have I used for this?
+* [Vue.js](https://vuejs.org)
+* [Bulma](https://bulma.io/)
+* [PokeAPI](https://pokeapi.co/)
+* [Netlify](https://www.netlify.com/)
+
+### Project setup
 ```
 npm install
 ```
@@ -22,3 +30,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
